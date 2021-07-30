@@ -1,0 +1,7 @@
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\bin\Debug\samplegroupby.exe.config
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\bin\Debug\samplegroupby.exe
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\bin\Debug\samplegroupby.pdb
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\obj\Debug\samplegroupby.csprojAssemblyReference.cache
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\obj\Debug\samplegroupby.csproj.CoreCompileInputs.cache
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\obj\Debug\samplegroupby.exe
+C:\Users\challa.suchitha\source\repos\samplegroupby\samplegroupby\obj\Debug\samplegroupby.pdb
