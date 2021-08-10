@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=PC-HYD-DEV014;Initial Catalog=assignment;Persist Security Info=True;User ID=sa;Password=Password123");
+        SqlConnection con = new SqlConnection(@"Data Source=PC-HYD-DEV01;Initial Catalog=assignment;Persist Security Info=True;User ID=sa;Password=Password123");
         SqlCommand com;
        
         public Form1()
@@ -29,7 +29,6 @@ namespace WindowsFormsApp1
         {
             try
             {
-
                 com = new SqlCommand
                 {
                     Connection = con,
@@ -52,17 +51,11 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void load_Click(object sender, EventArgs e)
         {
             try
             {
-
                 com = new SqlCommand
                 {
                     Connection = con,
@@ -82,23 +75,9 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
-
         
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
-        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-           
-        }
-
         private void button1_Click(object sender, EventArgs e)
-        {
-     
+        {     
             try
             {
                 textBox2.Clear();
@@ -118,10 +97,10 @@ namespace WindowsFormsApp1
                 DataTable dtEmployees = new DataTable();
                 if (reader.HasRows)
                 {
-
                     dtEmployees.Load(reader);
                     table.DataSource = dtEmployees;
                 }
+                
                 DataView dvEmployees = dtEmployees.DefaultView;
                 DataTable dtSortedData = dvEmployees.ToTable();
                 DataTable uniqueCols = dvEmployees.ToTable(true,columnsSelected.ToArray());
@@ -131,10 +110,8 @@ namespace WindowsFormsApp1
                 foreach (DataRow drr in uniqueCols.Rows)
                 {
                     foreach (DataColumn dcc in uniqueCols.Columns)
-                    {
-                      
+                    {                      
                         selectClause[iterator] = selectClause[iterator] + dcc.ColumnName + "=" + "'" + drr[dcc] + "'" +" "+ "and"+" ";
-
                     }
                     selectClause[iterator]=selectClause[iterator].Substring(0, selectClause[iterator].Length - 4);
                     iterator++;
@@ -156,34 +133,12 @@ namespace WindowsFormsApp1
                         textBox2.AppendText(temp);
                         textBox2.AppendText(Environment.NewLine);
                     }
-                }
-              
-
-
-              
+                } 
             }
             finally
-            {
-               
+            {               
                 con.Close();
             }
-        }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-   
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
